@@ -1,0 +1,13 @@
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.exe
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.deps.json
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.runtimeconfig.json
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.runtimeconfig.dev.json
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.dll
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\bin\Debug\netcoreapp3.1\VariablesAndDataTypes.pdb
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.csprojAssemblyReference.cache
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.csproj.CoreCompileInputs.cache
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.AssemblyInfoInputs.cache
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.AssemblyInfo.cs
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.dll
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.pdb
+C:\Users\Colemen\Desktop\Basic_C-Sharp_Projects\VariablesAndDataTypes\VariablesAndDataTypes\obj\Debug\netcoreapp3.1\VariablesAndDataTypes.genruntimeconfig.cache
