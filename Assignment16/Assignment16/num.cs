@@ -1,6 +1,6 @@
 ﻿namespace Assignment16
 {
-    public class num
+    public static class num
     {
     }
 }
