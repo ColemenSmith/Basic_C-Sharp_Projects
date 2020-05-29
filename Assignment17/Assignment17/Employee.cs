@@ -9,5 +9,10 @@ namespace Assignment17
     public class Employee : Person
     {
         public int ID { get; set; }
+
+        public override void SayName()
+        {
+            Console.WriteLine("Fullname: " + FirstName + " " + LastName);
+        }
     }
 }

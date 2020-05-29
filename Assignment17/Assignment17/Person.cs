@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace Assignment17
 {
-    public class Person
+    public abstract class Person
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public void SayName()
-        {
-            Console.WriteLine("Fullname: " + FirstName + " " + LastName);
-        }
+        public abstract void SayName();
+       
     }
 }
