@@ -14,6 +14,7 @@ namespace Assignment17
             employee.FirstName = "Sample";
             employee.LastName = "Student";
             employee.SayName();
+            employee.Quit(employee);
             Console.ReadLine();
         }
     }
