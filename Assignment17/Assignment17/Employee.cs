@@ -18,5 +18,23 @@ namespace Assignment17
         {
             throw new NotImplementedException();
         }
+        public static bool operator== (Employee employee, Employee employee2)
+        {
+            bool status = false;
+            if (employee.ID == employee2.ID)
+            {
+                status = true;
+            }
+            return status;
+        }
+        public static bool operator!= (Employee employee, Employee employee2)
+        {
+            bool status = false;
+            if (employee.ID == employee2.ID)
+            {
+                status = true;
+            }
+            return status;
+        }
     }
 }
