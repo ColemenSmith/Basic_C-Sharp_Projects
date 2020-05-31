@@ -14,10 +14,12 @@ namespace Assignment17
         {
             Console.WriteLine("Fullname: " + FirstName + " " + LastName);
         }
+
         public void Quit(Employee employee)
         {
             throw new NotImplementedException();
         }
+
         public static bool operator== (Employee employee, Employee employee2)
         {
             bool status = false;
@@ -27,12 +29,13 @@ namespace Assignment17
             }
             return status;
         }
+
         public static bool operator!= (Employee employee, Employee employee2)
         {
             bool status = false;
             if (employee.ID == employee2.ID)
             {
-                status = true;
+                status = false;
             }
             return status;
         }

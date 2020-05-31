@@ -15,7 +15,8 @@ namespace Assignment17
             employee.LastName = "Student";
             employee.ID = 1234;
             employee.SayName();
-            //employee.Quit(employee);
+
+            employee.Quit(employee);
 
             Employee employee2 = new Employee();
             employee2.FirstName = "Sample";
