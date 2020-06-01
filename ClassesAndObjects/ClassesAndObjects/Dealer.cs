@@ -20,6 +20,7 @@ namespace ClassesAndObjects
             Console.WriteLine(card);
             using (StreamWriter file = new StreamWriter(@"C:\Users\smith\Desktop\Basic_C-Sharp_Projects\ClassesAndObjects\Logs\Log.txt", true))
             {
+                file.WriteLine(DateTime.Now);
                 file.WriteLine(card);
             }
             Deck.Cards.RemoveAt(0);
