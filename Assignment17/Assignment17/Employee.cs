@@ -17,7 +17,7 @@ namespace Assignment17
 
         public void Quit(Employee employee)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("That's it! I quit!");
         }
 
         public static bool operator== (Employee employee, Employee employee2)
