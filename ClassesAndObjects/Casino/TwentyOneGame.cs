@@ -35,7 +35,7 @@ namespace Casino.ClassesAndObjects
                 }
                 if (bet < 0)
                 {
-                    throw new FraudException();
+                    throw new FraudException("Security! Kick this person out.");
                 }
                 bool sucessfullyBet = player.Bet(bet);
                 if (!sucessfullyBet)
