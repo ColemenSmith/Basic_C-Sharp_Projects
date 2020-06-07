@@ -80,9 +80,29 @@ namespace ExcelToSql
                 List<Employee> employees = employeesBindingSource.DataSource as List<Employee>;
                 if (employees != null)
                 {
-                    using (IDbConnection db = new SqlConnection(connectionString))
+                    foreach (var employee in employees)
                     {
-                        db.BulkInsert(employees);
+                        //using (IDbConnection db = new SqlConnection(connectionString))
+                        using (SqlConnection connection = new SqlConnection(connectionString))
+                        {
+                            string query = "INSERT INTO dbo.Employee ([0], FirstName, LastName, Gender, Country, Age, Date, Id) VALUES (@EmployeeId, @FirstName, @LastName, @Gender, @Country, @Age, @Date, @Id)";
+                            using (SqlCommand command = new SqlCommand(query, connection))
+                            {
+                                command.Parameters.AddWithValue("@EmployeeId", employee.EmployeeId);
+                                command.Parameters.AddWithValue("@FirstName", employee.FirstName);
+                                command.Parameters.AddWithValue("@LastName", employee.LastName);
+                                command.Parameters.AddWithValue("@Gender", employee.Gender);
+                                command.Parameters.AddWithValue("@Country", employee.Country);
+                                command.Parameters.AddWithValue("@Age", employee.Age);
+                                command.Parameters.AddWithValue("@Date", employee.Date);
+                                command.Parameters.AddWithValue("@Id", employee.Id);
+
+                                connection.Open();
+                                command.ExecuteNonQuery();
+                                connection.Close();
+                            }
+                            //db.BulkInsert(employees);
+                        }
                     }
                 }
                 MessageBox.Show("Finished!");
