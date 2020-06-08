@@ -1,4 +1,4 @@
-﻿@model IEnumerable<CarInsurance.Models.Table>
+﻿@model IEnumerable<CarInsurance.Models.Insuree>
 
 @{
     ViewBag.Title = "Index";
@@ -10,90 +10,132 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-  <tr>
-    <th>
-      @Html.DisplayNameFor(model => model.FirstName)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.LastName)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.EmailAddress)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.DateOfBirth)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.CarYear)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.CarMake)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.CarModel)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.DUI)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.SpeedingTickets)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.FullCoverage)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.PartialCoverage)
-    </th>
-    <th>
-      @Html.DisplayNameFor(model => model.Quote)
-    </th>
-    <th></th>
-  </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarMake)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CarModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DUI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SpeedingTickets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullCoverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartialCoverage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quote)
+        </th>
+        <th></th>
+    </tr>
 
 @foreach (var item in Model) {
-<tr>
-  <td>
-    @Html.DisplayFor(modelItem => item.FirstName)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.LastName)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.EmailAddress)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.DateOfBirth)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.CarYear)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.CarMake)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.CarModel)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.DUI)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.SpeedingTickets)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.FullCoverage)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.PartialCoverage)
-  </td>
-  <td>
-    @Html.DisplayFor(modelItem => item.Quote)
-  </td>
-  <td>
-    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-  </td>
-</tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarMake)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DUI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SpeedingTickets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullCoverage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartialCoverage)
+        </td>
+        <td>
+          @{
+              double cost = 50;
+              int age = DateTime.Now.Year - item.DateOfBirth.Year;
+              if (age < 25 && age > 18)
+              {
+                cost += 25;
+              }
+              else if (age < 18)
+              {
+                cost += 100;
+              }
+              if (age > 100)
+              {
+                cost += 25;
+              }
+              if (item.CarYear < 2000)
+              {
+                cost += 25;
+              }
+              if (item.CarYear > 2015)
+              {
+                cost += 25;
+              }
+              if (item.CarMake == "Porsche")
+              {
+                cost += 25;
+              }
+              if (item.CarMake == "Porsche" && item.CarModel == "911 Carerra")
+              {
+                cost += 25;
+              }
+              cost += 10 * item.SpeedingTickets;
+              if (item.DUI == true)
+              {
+                cost = cost + (cost * .25);
+              }
+              if (item.FullCoverage == true)
+              {
+                cost = cost + (cost * .5);
+              }
+
+          }
+          $@cost
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
 }
 
 </table>
